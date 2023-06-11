@@ -1,0 +1,146 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.cursor {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: rgb(43, 86, 226);
+  border-radius: 50vw;
+  pointer-events: none;
+}
+.border{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 0;
+  left: 0;
+  z-index: 101;
+  /* background: blueviolet; */
+  border: 2px solid rgb(255, 0, 0);
+  border-radius: 50vw;
+  pointer-events: none;
+}
+.container{
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
+    /* background-color: rgb(165, 108, 67); */
+    background-image: url(./image/background\ image4.jpg);
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    /* color: transparent; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .Wrap{
+    /* width: 100vw;
+    height: 100vh; */
+    /* height: 10rem;
+    width: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2rem; */
+    font-size: 2rem;
+    transform: skew(-5deg) rotate(-5deg);
+}
+.Wrap .btn, .Wrap .btn button {
+    position: relative;
+    z-index: 1;
+    margin: 2rem 0;
+    transition: 0.3s color ease, 0.3s font-size ease;
+    background-color: transparent;
+    border: transparent;
+    text-decoration:none;
+    font-size:30px;
+    color: white;
+    cursor: pointer;
+    /* font-weight:800; */
+    /* font:bolder; */
+  }
+  a{
+    text-decoration: none;
+  }
+
+.Wrap .btn button::before {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    top: -0.25rem;
+    left: -1rem;
+    width: 0;
+    height: 120%;
+    /* background: var(--cream); */
+    /* background:  rgb(117, 62, 62); */
+    background-color: white;
+    transition: 0.3s width ease;
+}
+
+.Wrap .btn button:hover {
+    font-size: 3rem;
+    /* color: var(--theme); */
+    /* color: rgb(165, 108, 67); */
+    color: black;
+  }
+  
+  .Wrap .btn button:hover:before {
+    padding: 0 1rem;
+    width: 100%;
+    /* box-shadow: 6px 6px 0 var(--d-theme); */
+  }
+  
+  .btn button{
+    display: flex;
+    width: 110%;
+    justify-content: space-between;
+    align-items: center;
+  }
+/* .btn button{
+    width: 9rem;
+    height: 4rem;
+    background-color: transparent;
+    border: transparent;
+    font-size:x-large;
+    color: White;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+} */
+/* .Wrap .btn button:hover{
+    background-color: white;
+    color: rgb(165, 108, 67);
+    scale: 1.2;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    width: 15rem;
+    transition-duration: 50ms;
+} */
+nav i{
+  margin-left:1rem ;
+  margin-top: 1rem;
+  font-size: xx-large;
+  color: white;
+  margin-left: -41rem;
+  margin-bottom: 40rem;
+  
+}
+
+@media screen and (max-width:400px) {
+  nav i{
+    margin-left: -5rem;
+  }
+}
+@media screen and (max-width:600px) {
+  nav i{
+    margin-left: -5rem;
+  }
+}
+
+

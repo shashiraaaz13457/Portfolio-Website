@@ -1,0 +1,50 @@
+.container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .container .Wrap {
+    font-size: 2rem;
+    transform: skew(-5deg) rotate(-5deg);
+  }
+  
+  .Wrap .btn, .Wrap .btn a {
+    position: relative;
+    z-index: 1;
+    margin: 2rem 0;
+    transition: 0.3s color ease, 0.3s font-size ease;
+  }
+  
+  .Wrap .btn a::before {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    top: -0.25rem;
+    left: -1rem;
+    width: 0;
+    height: 120%;
+    /* background: var(--cream); */
+    background:  rgb(186, 56, 56);;
+    transition: 0.3s width ease;
+  }
+  
+  .Wrap .btn a:hover {
+    font-size: 3rem;
+    /* color: var(--theme); */
+    color: rgb(186, 56, 56);
+  }
+  
+  .Wrap .btn a:hover:before {
+    padding: 0 1rem;
+    width: 100%;
+    box-shadow: 6px 6px 0 var(--d-theme);
+  }
+  
+  .btn a {
+    display: flex;
+    width: 110%;
+    justify-content: space-between;
+    align-items: center;
+  }

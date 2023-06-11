@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.cursor {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: rgb(43, 86, 226);
+  border-radius: 50vw;
+  pointer-events: none;
+}
+
+.border {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 0;
+  left: 0;
+  z-index: 101;
+  /* background: blueviolet; */
+  border: 2px solid rgb(255, 0, 0);
+  border-radius: 50vw;
+  pointer-events: none;
+}
+
+html {
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  background: url(./image/Background\ image3.jpg);
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+.nav1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 100px;
+  /* margin-left: 2rem; */
+}
+
+.nav1 h1 {
+  background: linear-gradient(120deg,
+      #3d698d 20.69%,
+      #da079b 50.19%,
+      #1144bc 79.69%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3rem;
+  font-weight: 300;
+  /* display: inline; */
+  /* width: 20rem; */
+  /* margin-left: -12rem; */
+}
+
+.logo {
+  max-height: 5rem;
+  border-radius: 3rem;
+}
+
+.nav1 ul {
+  /* display: flex; */
+  margin-left: -3rem;
+}
+
+.nav1 ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 10px 20px;
+  /* gap: 30rem; */
+}
+
+.nav1 ul li a {
+  font-size: larger;
+  /* row-gap: 10rem; */
+  color: #1d1d24;
+  position: relative;
+  padding: 5px 0;
+  margin-left: 2rem;
+}
+
+.nav1 ul li a:hover {
+  color: #fd4766;
+}
+
+.nav1 ul li a:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: #fd4766;
+  transition: 0.3s;
+  bottom: 0;
+}
+
+.nav1 ul li a:hover:after {
+  width: 100%;
+}
+
+.btn {
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 16px 40px;
+  border-radius: 500px;
+  display: inline-block;
+  font-weight: 500;
+  transition: all 0.4s ease-in-out;
+  background-size: 152% 100%;
+  background: #fd4766;
+  border: 2px solid #fd4766;
+}
+
+.btn:hover {
+  background: transparent;
+  border-color: #fd4766;
+  color: #fd4766;
+}
+
+.content {
+  position: absolute;
+  top: 35%;
+  left: 8%;
+}
+
+.content .title {
+  color: #0a0a0a;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  display: inline-block;
+  margin-bottom: 20px;
+  background: linear-gradient(120deg,
+      #c20499 20.69%,
+      #7644ff 50.19%,
+      #fd4766 79.69%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.content h1 {
+  color: #1f1f25;
+  font-size: 75px;
+  font-weight: 900;
+  line-height: 90px;
+  text-transform: inherit;
+  width: 70%;
+}
+
+.content h1 span {
+  color: #700f81;
+}
+
+.content p {
+  width: 55%;
+  color: #202020;
+  margin-top: 25px;
+  margin-bottom: 30px;
+}
+
+.image img {
+  width: 25rem;
+  /* background-size: cover; */
+  /* height: 30rem; */
+  /* margin-left:70rem; */
+  position: relative;
+  left: 70rem;
+  margin-top: 6rem;
+  border: 2rem solid rgb(47, 134, 165);
+  border-radius: 3rem;
+  animation: Shashi 1s linear infinite alternate;
+  /* opacity: 0.95; */
+}
+
+/* .contain{
+  display: flex;
+  flex-direction: column;
+} */
+/* .image img:hover{
+    transition: Shashi 1s ease;
+    animation: Shashi2 1s linear alternate;
+    animation: Shashi 1s linear backwards;
+    animation: Shashi 1s ease forwards;
+
+} */
+
+@keyframes Shashi {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
+
+}
+
+
+@media only screen and (min-width: 0px) and (max-width: 601px){
+
+  /* .nav1 ul{
+    font-size: larger;
+    display: flex;
+    flex-direction: column;
+    display: block;
+  } */
+  .nav1 {
+    flex-direction: column;
+
+  }
+
+  .contain {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+  }
+
+  .image {
+    position: relative;
+    /* left: 100px; */
+  }
+}
